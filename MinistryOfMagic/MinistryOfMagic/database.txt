@@ -1,0 +1,6 @@
+0 10001 Ludovic Bagman quidditch578 0.000000 0
+0 10003 Artur Weasley muggle12 0.000000 0
+1 10004 Cornelius Fudge node534 0.000000 -
+1 10005 Rufus Scrimgeour aurors3412 0.000000 -
+0 10006 b c d 22.000000 1
+1 10007 f g h 0.000000 -

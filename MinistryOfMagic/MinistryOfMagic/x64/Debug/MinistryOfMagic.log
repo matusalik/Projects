@@ -1,0 +1,4 @@
+﻿  MinistryOfMagic.cpp
+C:\Users\mateu\OneDrive\Pulpit\MinistryOfMagic\MinistryOfMagic\Commands.h(16,1): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\mateu\OneDrive\Pulpit\MinistryOfMagic\MinistryOfMagic\Ministry.h(157): warning C4715: "ms::Ministry::getPaid”: niewszystkie ścieżki kodu zwracają wartość
+  MinistryOfMagic.vcxproj -> C:\Users\mateu\OneDrive\Pulpit\MinistryOfMagic\x64\Debug\MinistryOfMagic.exe

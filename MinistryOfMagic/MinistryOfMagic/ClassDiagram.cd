@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ms::Commands">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAwAAMBEAAAAAAAAAAAAEgAAAEAAAAQABAAAADAA=</HashCode>
+      <FileName>Commands.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ms::EmpLogData">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="ms::Employee">
+      <InheritanceModifierLabel ManuallyPlaced="true">
+        <Position X="-1.159" Y="2.735" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAgAAAAAAIAAAACAAAAAgAgAAAAgAAIIA=</HashCode>
+      <FileName>EmpLogData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ms::Employee">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAIAACAAEAgAEAAAEAARAAAg=</HashCode>
+      <FileName>Employee.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ms::Ministry">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAADACCAAAAAAABBQAAAACIAQAAAAQAAAIAAgARAAgA=</HashCode>
+      <FileName>Ministry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ms::mm_Console">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>mm_Console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
