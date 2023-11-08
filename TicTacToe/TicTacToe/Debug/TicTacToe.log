@@ -1,2 +1,4 @@
 ﻿  TicTacToe.cpp
-  TicTacToe.vcxproj -> C:\Users\admin\Desktop\Nowy folder\Projects\TicTacToe\Debug\TicTacToe.exe
+C:\Users\mateu\OneDrive\Pulpit\Nowy folder\Projects\TicTacToe\TicTacToe\Grid.h(20,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mateu\OneDrive\Pulpit\Nowy folder\Projects\TicTacToe\TicTacToe\Grid.h(26): warning C4715: "ms::Grid::isDigit”: niewszystkie ścieżki kodu zwracają wartość
+  TicTacToe.vcxproj -> C:\Users\mateu\OneDrive\Pulpit\Nowy folder\Projects\TicTacToe\Debug\TicTacToe.exe

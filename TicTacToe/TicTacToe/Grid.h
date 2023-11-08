@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <iomanip>
+#include <string>
 namespace ms {
 	class Grid {
 		std::vector<std::vector<char>>grid;
@@ -15,18 +16,34 @@ namespace ms {
 				grid.push_back(temp);
 			}
 		}
-		bool pushGrid(int r, int c, int player) {
-			if (grid[r-1][c-1] == ' ') {
-				if (player == 0) {
-					grid[r-1][c-1] = 'X';
-				}
-				else if (player == 1) {
-					grid[r-1][c-1] = 'O';
+		bool isDigit(std::string str) {
+			for (int i = 0; i < str.length(); i++) {
+				if (isdigit(str[i]) == false) {
+					return false;
 				}
 				return true;
 			}
+		}
+		bool pushGrid(std::string sr, std::string sc, int player) {
+			if (isDigit(sr)&&isDigit(sc)) {
+				int r = std::stoi(sr);
+				int c = std::stoi(sc);
+				if (grid[r - 1][c - 1] == ' ') {
+					if (player == 0) {
+						grid[r - 1][c - 1] = 'X';
+					}
+					else if (player == 1) {
+						grid[r - 1][c - 1] = 'O';
+					}
+					return true;
+				}
+				else {
+					std::cout << "This place is already taken!" << std::endl;
+					return false;
+				}
+			}
 			else {
-				std::cout << "This place is already taken!" << std::endl;
+				std::cout << "Invalid input!" << std::endl;
 				return false;
 			}
 		}

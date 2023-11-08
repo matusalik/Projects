@@ -13,13 +13,50 @@ int main()
         std::cout << "Type 'C' for computer or 'F' for a game with a friend." << std::endl;
         std::cin >> game;
         if (game == 'C') {
+            grid.clearConsole();
+            grid.showGrid();
+            while (Switch) {
+                std::srand((unsigned int)std::time(nullptr));
+                std::string r, c;
+                if (counter % 2 == 0) {
+                    std::cout << "|Player One (X)|" << std::endl;
+                    std::cout << "Row: ";
+                    std::cin >> r;
+                    std::cout << "Collumn: ";
+                    std::cin >> c;
+                    grid.clearConsole();
+                    if (grid.pushGrid(r, c, 0)) {
+                        counter++;
+                    }
+                }
+                else if (counter % 2 != 0) {
+                    r = std::to_string((rand() % 3) + 1);
+                    c = std::to_string((rand() % 3) + 1);
+                    grid.clearConsole();
+                    if (grid.pushGrid(r, c, 1)) {
+                        counter++;
+                    }
+                }
+                grid.showGrid();
+                if (grid.checkWinner() == 0) {
+                    std::cout << "Player One wins!" << std::endl;
+                    Switch = false;
+                }
+                else if (grid.checkWinner() == 1) {
+                    std::cout << "Player Two wins!" << std::endl;
+                    Switch = false;
+                }
+                else if (grid.checkWinner() == 2) {
+                    Switch = grid.isFull();
+                }
+            }
             Switch2 = false;
         }
         else if (game == 'F') {
             grid.clearConsole();
             grid.showGrid();
             while (Switch) {
-                int r, c;
+                std::string r, c;
                 if (counter % 2 == 0) {
                     std::cout << "|Player One (X)|" << std::endl;
                     std::cout << "Row: ";
