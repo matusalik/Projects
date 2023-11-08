@@ -15,9 +15,6 @@ namespace ms {
 				grid.push_back(temp);
 			}
 		}
-		std::vector<std::vector<char>>getGrid() {
-			return grid;
-		}
 		bool pushGrid(int r, int c, int player) {
 			if (grid[r-1][c-1] == ' ') {
 				if (player == 0) {
@@ -65,6 +62,62 @@ namespace ms {
 				return false;
 			}
 			return true;
+		}
+		int checkWinner() {
+			for (int i = 0; i < 3; i++) {
+				int x = 0, o = 0;
+				for (int j = 0; j < 3; j++) {
+					if (grid[i][j] == 'X')
+						x++;
+					else if (grid[i][j] == 'O')
+						o++;
+				}
+				if (x == 3)
+					return 0;
+				else if (o == 3)
+					return 1;
+			}
+			for (int i = 0; i < 3; i++) {
+				int x = 0, o = 0;
+				for (int j = 0; j < 3; j++) {
+					if (grid[j][i] == 'X')
+						x++;
+					else if (grid[j][i] == 'O')
+						o++;
+				}
+				if (x == 3)
+					return 0;
+				else if (o == 3)
+					return 1;
+			}
+			if (grid[0][0] == 'X' && grid[1][1] == 'X' && grid[2][2] == 'X') {
+				return 0;
+			}
+			if (grid[0][0] == 'O' && grid[1][1] == 'O' && grid[2][2] == 'O') {
+				return 1;
+			}
+			if (grid[0][2] == 'X' && grid[1][1] == 'X' && grid[2][0] == 'X') {
+				return 0;
+			}
+			if (grid[0][2] == 'O' && grid[1][1] == 'O' && grid[2][0] == 'O') {
+				return 1;
+			}
+			return 2;
+		}
+		void clearConsole() {
+			COORD topLeft = { 0, 0 };
+			HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+			CONSOLE_SCREEN_BUFFER_INFO screen;
+			DWORD written;
+			GetConsoleScreenBufferInfo(console, &screen);
+			FillConsoleOutputCharacterA(
+				console, ' ', screen.dwSize.X * screen.dwSize.Y, topLeft, &written
+			);
+			FillConsoleOutputAttribute(
+				console, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE,
+				screen.dwSize.X * screen.dwSize.Y, topLeft, &written
+			);
+			SetConsoleCursorPosition(console, topLeft);
 		}
 	};
 }
